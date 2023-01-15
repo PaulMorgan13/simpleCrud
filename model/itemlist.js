@@ -20,4 +20,4 @@ const itemListSchema = new mongoose.Schema({
 })  
 
 
-module.exports = mongoose.model("Itemlist",itemListSchema , "items")
+module.exports = mongoose.model("ItemList",itemListSchema , "items")

@@ -27,7 +27,7 @@ connectDB()
 //set middleware
 app.set("view engine", "ejs")   
 app.set(express.static("public"))   
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}))  
 
 
 
@@ -35,7 +35,8 @@ app.use(express.urlencoded({extended:true}))
 
 //set routes    
 
-app.use('/', homeRoutes) 
+app.use('/', homeRoutes)   
+app.use("/edit", editRoutes)
 
 
 

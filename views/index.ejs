@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <h1>This is the Home Page!</h1>
@@ -19,9 +19,14 @@
         <button type="submit">Add item</button>
     </form>
     <ul>
-       
-
-
+        <% itemList.forEach(item => { %>
+            <li>
+                <div><%= item.textInput %></div>
+                <div><%= item.numInput %></div>
+                <a href="/edit/<%= item._id %>">Edit</a>
+                <a href="/edit/remove/<%= item._id %>">Remove</a>
+            </li>
+        <% }) %>
     </ul>
 </body>
 </html>

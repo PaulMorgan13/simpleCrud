@@ -1,11 +1,11 @@
-const Itemlist = require("../model/itemlist")  
+const ItemList = require("../model/itemlist")  
 
 module.exports = {
     getIndex : async (req, res) => {
         try {
             const items = await
 
-            Itemlist.find()
+            ItemList.find()
             res.render("index", { itemList: items });
         } catch (err) {
             if (err) return res.status(500).send(err);
