@@ -1,12 +1,10 @@
-const express = require("express") 
-const router = express.Router()  
-const editcontroller = require("../controllers/edit")   
+const express = require('express')
+const router = express.Router()
+const editController = require('../controllers/edit')
 
-
-router.get("",editcontroller.getEdit )  //get the edit page with item id   
-
-router.get("", editcontroller.deleteTask)// this will delete selected item 
-
+router.get('/:id', editController.getEdit)
+router.get('/remove/:id', editController.deleteItem)
+router.post('/update/:id', editController.updateItem)
 
 
 module.exports = router
